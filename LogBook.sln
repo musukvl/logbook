@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.WebApi", "LogBook.WebApi\LogBook.WebApi.csproj", "{17BDEB90-15E7-4AE4-9614-DDB0F5C3EA2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.Cli", "LogBook.Cli\LogBook.Cli.csproj", "{9512EF9D-C5BD-477D-BD19-8D41B7FAB5F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook", "LogBook\LogBook.csproj", "{CAF7C19C-9F8A-4010-B9ED-0436EF64909A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{99D65207-ECD3-4E37-B8A9-A8EAB200B72F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.UnitTests", "Tests\LogBook.UnitTests\LogBook.UnitTests.csproj", "{40767CDF-B672-4968-962E-6FAE0551F7F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.E2eTests", "Tests\LogBook.E2eTests\LogBook.E2eTests.csproj", "{E048C3DF-6846-4ADC-A08F-71250417919C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17BDEB90-15E7-4AE4-9614-DDB0F5C3EA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BDEB90-15E7-4AE4-9614-DDB0F5C3EA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BDEB90-15E7-4AE4-9614-DDB0F5C3EA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BDEB90-15E7-4AE4-9614-DDB0F5C3EA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9512EF9D-C5BD-477D-BD19-8D41B7FAB5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9512EF9D-C5BD-477D-BD19-8D41B7FAB5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9512EF9D-C5BD-477D-BD19-8D41B7FAB5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9512EF9D-C5BD-477D-BD19-8D41B7FAB5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF7C19C-9F8A-4010-B9ED-0436EF64909A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF7C19C-9F8A-4010-B9ED-0436EF64909A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF7C19C-9F8A-4010-B9ED-0436EF64909A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF7C19C-9F8A-4010-B9ED-0436EF64909A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40767CDF-B672-4968-962E-6FAE0551F7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40767CDF-B672-4968-962E-6FAE0551F7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40767CDF-B672-4968-962E-6FAE0551F7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40767CDF-B672-4968-962E-6FAE0551F7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E048C3DF-6846-4ADC-A08F-71250417919C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E048C3DF-6846-4ADC-A08F-71250417919C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E048C3DF-6846-4ADC-A08F-71250417919C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E048C3DF-6846-4ADC-A08F-71250417919C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40767CDF-B672-4968-962E-6FAE0551F7F5} = {99D65207-ECD3-4E37-B8A9-A8EAB200B72F}
+		{E048C3DF-6846-4ADC-A08F-71250417919C} = {99D65207-ECD3-4E37-B8A9-A8EAB200B72F}
+	EndGlobalSection
+EndGlobal
