@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.UnitTests", "Tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.E2eTests", "Tests\LogBook.E2eTests\LogBook.E2eTests.csproj", "{E048C3DF-6846-4ADC-A08F-71250417919C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.Database", "LogBook.Database\LogBook.Database.csproj", "{985CC665-0C72-4E5D-9348-411A46A13651}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{E048C3DF-6846-4ADC-A08F-71250417919C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E048C3DF-6846-4ADC-A08F-71250417919C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E048C3DF-6846-4ADC-A08F-71250417919C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985CC665-0C72-4E5D-9348-411A46A13651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985CC665-0C72-4E5D-9348-411A46A13651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985CC665-0C72-4E5D-9348-411A46A13651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985CC665-0C72-4E5D-9348-411A46A13651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{40767CDF-B672-4968-962E-6FAE0551F7F5} = {99D65207-ECD3-4E37-B8A9-A8EAB200B72F}

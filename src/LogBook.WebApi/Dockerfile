@@ -38,9 +38,8 @@ FROM base AS final
 USER ${USERNAME}
 WORKDIR ${HOME}/app
 
-COPY  --chown=${USERNAME}:${GROUP} --from=publish /app/publish ./
-
-EXPOSE 8080
+COPY --chown=${USERNAME}:${GROUP} --from=publish /app/publish ./
+RUN echo "user: ${USERNAME}"
 
 ENTRYPOINT ["dotnet", "LogBook.WebApi.dll"]
 
