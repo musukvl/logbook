@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres:12.4
+    environment:
+    - POSTGRES_PASSWORD=devpwd
+    ports:
+    - 5432:5432
+    volumes:
+    - postgresql_data:/var/lib/postgresql/data
+
+
+  logbook-webapi:
+    image: logbook/webapi:${TAG:-latest}    
+    build:
+      context: ..
+      dockerfile: src/LogBook.WebApi/Dockerfile
+    restart: always
+    ports:
+      - 8100:8080
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    env_file:
+      - docker-compose.env
+      
+volumes:
+  postgresql_data:
+    driver: local
