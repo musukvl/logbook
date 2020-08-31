@@ -14,13 +14,29 @@ namespace LogBook.Database
         {
         }
         
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Route> Routes { get; set; }
         public virtual DbSet<WayPoint> WayPoints { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
+            modelBuilder.HasPostgresExtension("postgis");
+            
+            modelBuilder.Entity<User>(
+                e =>
+                {
+                    e.ToTable("users");
+                    e.HasKey(x => x.Id);
+                    e.Property(x => x.Id)
+                        .ValueGeneratedOnAdd();
+                   
+                    e.HasMany<Route>(x => x.Routes)
+                        .WithOne(x => x.User)
+                        .HasForeignKey(x => x.UserId);
+                }
+            );
+            
             modelBuilder.Entity<Route>(
                 e =>
                 {

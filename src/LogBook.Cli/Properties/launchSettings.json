@@ -1,0 +1,13 @@
+{
+    "profiles": {
+
+        "PopulateDb": {
+            "commandName": "Project",
+            "commandLineArgs": "populate-db --waypoints-file \"D:\\dev\\LogBook\\logbook-data\\waypoints.json\"  --routes-file \"D:\\dev\\LogBook\\logbook-data\\routes.json\"",
+            "environmentVariables": {
+               
+            } 
+        }
+
+    }
+}

@@ -1,8 +1,12 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 
-ENV USERNAME=appuser
-ENV UID=9999
-ENV GROUP=appgroup
+ARG UID=9999
+ARG USERNAME=appuser
+ARG GROUP=appgroup
+
+ENV USERNAME=${USERNAME}
+ENV UID=${UID}
+ENV GROUP=${GROUP}
 ENV HOME=/home/${USERNAME}
 
 WORKDIR /
@@ -39,7 +43,6 @@ USER ${USERNAME}
 WORKDIR ${HOME}/app
 
 COPY --chown=${USERNAME}:${GROUP} --from=publish /app/publish ./
-RUN echo "user: ${USERNAME}"
 
 ENTRYPOINT ["dotnet", "LogBook.WebApi.dll"]
 

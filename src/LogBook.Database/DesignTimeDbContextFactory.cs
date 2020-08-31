@@ -17,7 +17,8 @@ namespace LogBook.Database
             var builder = new DbContextOptionsBuilder<LogBookDbContext>();
 
             var connectionString = configuration.GetConnectionString("Default");
-            builder.UseNpgsql(connectionString);
+            builder.UseNpgsql(connectionString, o =>
+                o.UseNetTopologySuite());
 
             return new LogBookDbContext(builder.Options);
         }

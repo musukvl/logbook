@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LogBook.Database.Model
 {
-    public class Route
+    public class User
     {
         [Key]
         [Required]
@@ -12,14 +12,6 @@ namespace LogBook.Database.Model
         
         public string Name { get; set; }
         
-        [Required]
-        public DateTime Date { get; set; }
-
-        
-        public Guid UserId { get; set; }
-        public User User { get; set; }
-        
-        public ICollection<WayPoint> WayPoints { get; set; }
-        
+        public ICollection<Route> Routes { get; set; } 
     }
 }

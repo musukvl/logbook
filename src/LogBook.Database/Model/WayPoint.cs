@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using NetTopologySuite.Geometries;
 
 namespace LogBook.Database.Model
 {
@@ -14,6 +15,17 @@ namespace LogBook.Database.Model
         
         [Required]
         public DateTime Date { get; set; }
+        
+        public Point Location { get; set; }
         public Route Route { get; set; }
+        
+        public string Description { get; set;}
+        
+        public CustomFields CustomFields 
+    }
+
+    public class CustomFields
+    {
+        
     }
 }
