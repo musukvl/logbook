@@ -14,8 +14,9 @@ WORKDIR /
 RUN groupadd -r -g ${UID} ${GROUP} && \
     useradd -r -u ${UID} -g ${GROUP} -d ${HOME} -s /sbin/nologin -c "app user" ${USERNAME}
 RUN mkdir -p ${HOME}/app && \
-    chown -R ${USERNAME} ${HOME}
- 
+    chown -R ${USERNAME}:${GROUP} ${HOME}
+
+RUN cat /etc/passwd 
 
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
