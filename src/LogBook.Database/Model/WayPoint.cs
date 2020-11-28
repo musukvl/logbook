@@ -21,7 +21,7 @@ namespace LogBook.Database.Model
         
         public string Description { get; set;}
         
-        public CustomFields CustomFields 
+        public CustomFields CustomFields { get; set; }
     }
 
     public class CustomFields
